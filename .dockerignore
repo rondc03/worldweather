@@ -1,0 +1,14 @@
+target/
+Dockerfile
+.gradle/
+.git/
+.gitignore
+*.md
+*.iml
+.idea/
+settings/
+node_modules/
+*.log
+
+# allow the jar to be sent when building by copying it explicitly
+!target/worldweather-0.0.1-SNAPSHOT.jar
