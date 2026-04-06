@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: application
+  profiles:
+    active: prod # ${SPRING_PROFILES_ACTIVE:prod}
+
+  #datasource:
+   # url: ${DATASOURCE_URL}
+    #username: ${DATASOURCE_USER}
+    #password: ${DATASOURCE_PASS}
+   # driver-class-name: org.postgresql.Driver
+  #jpa:
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
+   # hibernate:
+    #  ddl-auto: update
+   # show-sql: false
+  cloud:
+    config:
+      uri: http://localhost:8888 #${CONFIG_SERVER_URI:http://localhost:8888}
+      #username: admin #${CONFIG_SERVER_USER:admin}
+      #password: ${CONFIG_SERVER_PASSWORD:}
+      #label: main
+      fail-fast: true
+
+logging:
+  file: "/worldweather/logs/worldweather.log"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env,configprops
+  endpoint:
+    env:
+      show-values: ALWAYS # Warning: Use only for debugging!
