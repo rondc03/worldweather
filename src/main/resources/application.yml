@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: worldweather
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:prod} # Default to 'prod' if not set
+
+logging:
+  # default to a local logs folder which is writable in most environments; override with LOG_FILE
+  file: ${LOG_FILE:./logs/worldweather.log}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env,configprops
+  endpoint:
+    env:
+      show-values: ALWAYS # Warning: Use only for debugging!
