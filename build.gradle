@@ -30,7 +30,7 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.2'
 	// Spring Cloud dependencies are enabled; runtime activation is controlled by properties/profiles.
 	//implementation 'org.springframework.cloud:spring-cloud-starter-config'
-	//implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
